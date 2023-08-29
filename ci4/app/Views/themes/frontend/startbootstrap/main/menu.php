@@ -36,13 +36,11 @@ if(file_exists(APPPATH . "Views/menus/Frontend.json")){
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <?php 
-                        if(empty(session()->get('token'))){
-                            echo '<a class="btn btn-outline-light" href="/login">LOGIN</a>';
-                        }else{
-                            echo '<a class="btn btn-outline-light" href="/dashboard">Dashboard</a>';
-                        }
-                    ?>
+                <?php if (!auth()->loggedIn()) : ?>
+                    <a class="btn btn-outline-light" href="/login">LOGIN</a>
+                <?php else : ?>
+                    <a class="btn btn-outline-light" href="/dashboard">Dashboard</a>
+                <?php endif; ?>    
                 </li>
             </ul>
         </div>

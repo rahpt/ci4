@@ -95,8 +95,8 @@ class Auth extends ShieldAuth
      */
     public array $redirects = [
         'register'    => '/',
-        'login'       => '/',
-        'logout'      => 'login',
+        'login'       => '/dashboard',
+        'logout'      => '/',
         'force_reset' => '/',
     ];
 
@@ -384,6 +384,12 @@ class Auth extends ShieldAuth
      */
     public bool $supportOldDangerousPassword = false;
 
+    function __construct()
+    {
+        $this->views['login']    =  getenv('theme.backend.path') . 'form/login/index';
+        $this->views['layout']   =  getenv('theme.backend.path') . 'login/layout';
+        $this->views['register'] = '\CodeIgniter\Shield\Views\register';
+    }
     /**
      * ////////////////////////////////////////////////////////////////////
      * OTHER SETTINGS

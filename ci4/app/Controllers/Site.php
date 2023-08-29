@@ -9,63 +9,63 @@ class Site extends BaseController {
 
     }
 
-    public function index(): string {
+    public function index(): void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/index', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function about() {
+    public function about():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/about', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function blog_home() {
+    public function blog_home():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/blog-home', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function blog_post() {
+    public function blog_post():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/blog-post', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function contact() {
+    public function contact():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/contact', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function faq() {
+    public function faq():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/faq', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function portfolio_item() {
+    public function portfolio_item():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/portfolio-item', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function portfolio_overview() {
+    public function portfolio_overview():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/portfolio-overview', $data);
         echo view(getenv('theme.frontend.path') . 'main/footer');
     }
 
-    public function pricing() {
+    public function pricing():void {
         $data = [];
         echo view(getenv('theme.frontend.path') . 'main/header');
         echo view(getenv('theme.frontend.path') . 'form/pricing', $data);
