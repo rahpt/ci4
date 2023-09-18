@@ -1,0 +1,18 @@
+[
+  {
+      "icon": "",
+      "title": "App.site_menu_home",
+      "url": "/",
+      "external": false,
+      "children": [],
+      "permission_controller" : ""
+  },
+  {
+    "icon": "",
+    "title": "App.site_menu_about",
+    "url": "/site/about",
+    "external": false,
+    "children": [],
+    "permission_controller" : ""
+}
+]
