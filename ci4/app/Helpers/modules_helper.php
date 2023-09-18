@@ -22,6 +22,7 @@ function loadModulesPSR4() {
 
     if (!file_exists($directory . 'Modules.json')) {
         $dirs = glob($directory . '*', GLOB_ONLYDIR);
+        $mods = [];
         foreach ($dirs as $dir) {
             $mods[] = (object) ['directory' => str_replace($directory, '', $dir), 'status' => true];
         }
