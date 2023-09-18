@@ -151,7 +151,7 @@ $notification = session()->get('notification');
                                     <i class="fas fa-list"></i>
                                     <span class="ml-2"><?= lang("App.menu_activity") ?></span>
                                 </a>
-                                <a href="<?= site_url('login/logout'); ?>" class="dropdown-item">
+                                <a href="<?= site_url('logout'); ?>" class="dropdown-item">
                                     <i class="fas fa-sign-out-alt"></i>
                                     <span class="ml-2"><?= lang("App.menu_logout") ?></span>
                                 </a>
