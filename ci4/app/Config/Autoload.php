@@ -18,8 +18,15 @@ use CodeIgniter\Config\AutoloadConfig;
  * NOTE: This class is required prior to Autoloader instantiation,
  *       and does not extend BaseConfig.
  */
-class Autoload extends AutoloadConfig
-{
+class Autoload extends AutoloadConfig {
+
+    function __construct() {
+        parent::__construct();
+        include_once(APPPATH.'Helpers/modules_helper.php');
+        
+        $this->psr4 = array_merge($this->psr4, loadModulesPSR4());
+    }
+    
     /**
      * -------------------------------------------------------------------
      * Namespaces
@@ -96,5 +103,7 @@ class Autoload extends AutoloadConfig
      * @var string[]
      * @phpstan-var list<string>
      */
-    public $helpers = [];
+    public $helpers = [
+        'general'
+    ];
 }

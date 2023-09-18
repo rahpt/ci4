@@ -5,6 +5,6 @@
 <script src="<?= site_url('assets/js/login.js'); ?>"></script>
 <script src="<?= site_url('assets/vendor/cookieconsent/dist/cookieconsent.js'); ?>"></script>
 <script src="<?= site_url('assets/js/cookieconsent-init.js'); ?>"></script>
-<!--?= toastAlert() ?-->
+<?= toastAlert() ?>
 </body>
 </html>

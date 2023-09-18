@@ -18,4 +18,6 @@ $routes->group('site', static function ($routes) {
     $routes->get('pricing', 'Site::pricing');
 });
 
+$routes->get('/dashboard', 'Dashboard::index');
+
 service('auth')->routes($routes);
